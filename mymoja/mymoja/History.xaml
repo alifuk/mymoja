@@ -1,0 +1,26 @@
+﻿<Window x:Class="mymoja.History"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mymoja"
+        mc:Ignorable="d"
+        Title="Historie" Height="228.622" Width="448.892" ResizeMode="NoResize" Icon="ikonky/Humidity.png">
+    <Grid>
+        <DatePicker x:Name="dtp1" HorizontalAlignment="Left" Margin="81,10,0,0" VerticalAlignment="Top" CalendarClosed="dtp1_CalendarClosed"/>
+        <DatePicker x:Name="dtp2" HorizontalAlignment="Left" Margin="329,10,0,0" VerticalAlignment="Top" CalendarClosed="dtp2_CalendarClosed"/>
+        <Label x:Name="label" Content="Datum od:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Datum do:" HorizontalAlignment="Left" Margin="258,9,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="medián" HorizontalAlignment="Left" Margin="112,53,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy" Content="průměrná odchylka" HorizontalAlignment="Left" Margin="201,53,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy1" Content="teplota" HorizontalAlignment="Left" Margin="27,82,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy2" Content="tlak" HorizontalAlignment="Left" Margin="27,113,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb_medtem" Content="teplota" HorizontalAlignment="Left" Margin="113,84,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy3" Content="srážky" HorizontalAlignment="Left" Margin="27,144,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb_medpress" Content="teplota" HorizontalAlignment="Left" Margin="112,115,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb_medwater" Content="teplota" HorizontalAlignment="Left" Margin="113,144,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb_avgtemp" Content="teplota" HorizontalAlignment="Left" Margin="201,84,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb_avgpress" Content="teplota" HorizontalAlignment="Left" Margin="201,115,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb_avgwater" Content="teplota" HorizontalAlignment="Left" Margin="201,144,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
