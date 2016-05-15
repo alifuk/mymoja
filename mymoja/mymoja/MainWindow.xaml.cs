@@ -25,12 +25,17 @@ namespace mymoja
     public partial class MainWindow : Window
     {
         List<WeatherServer> wservers = new List<WeatherServer>();
+        StreamWriter w;
         WeatherServer w1,w2;
 
         public MainWindow()
         {
             InitializeComponent();
 
+            w = File.AppendText("log.txt");
+            w.WriteLine(DateTime.Now.ToString() + " " +"Otevírání programu\n");
+            w.WriteLine(DateTime.Now.ToString() + " " +"Načítání ze souboru..\n");
+            
             lb_state.Content = "Načítání ze souboru..";
             load();
             lb_state.Content = "Načteno";
@@ -133,11 +138,16 @@ namespace mymoja
         private void dwntimer_Elapsed(object sender, ElapsedEventArgs e)
         {
 
+            w.WriteLine(DateTime.Now.ToString() + " " +"Timer checkující download fired\n");
             if (w1.gethtml() != "" && w2.gethtml() != "")
             {
+
+                w.WriteLine(DateTime.Now.ToString() + " " +"Oba servery stáhly html\n");
                 Timer tmr = (Timer)sender;
                 tmr.Stop();
                 tmr.Close();
+
+                w.WriteLine(DateTime.Now.ToString() + " " +"Zastavuji download timer\n");
                 parse();
             }
 
@@ -148,6 +158,8 @@ namespace mymoja
         {
             this.Dispatcher.Invoke((Action)(() =>
             {
+
+                w.WriteLine(DateTime.Now.ToString() + " " +"Parsování\n");
                 lb_state.Content = "Parsování...";
                 foreach (WeatherServer ws in wservers)
                 {
@@ -161,6 +173,8 @@ namespace mymoja
         {
 
             lb_state.Content = "Zobrazování...";
+
+            w.WriteLine(DateTime.Now.ToString() + " " +"Zobrazování\n");
 
             lb_namel.Content = w1.getname();
             //tb_htmll.Text = w1.gethtml();
@@ -224,6 +238,8 @@ namespace mymoja
             lb_points2.Content = points2.ToString();
 
             lb_state.Content = "Zobrazeno";
+
+            w.WriteLine(DateTime.Now.ToString() + " " +"Zobrazeno\n");
         }
 
         private void btn_parse_Click(object sender, RoutedEventArgs e)
@@ -234,12 +250,15 @@ namespace mymoja
         private void bt_vote1_Click(object sender, RoutedEventArgs e)
         {
             w1.hasPoint = true;
+
+            w.WriteLine(DateTime.Now.ToString() + " " +"Levý server obdržel bod\n");
             show();
         }
 
         private void bt_vote2_Click(object sender, RoutedEventArgs e)
         {
             w2.hasPoint = true;
+            w.WriteLine(DateTime.Now.ToString() + " " +"Pravý server obdržel bod\n");
             show();
         }
 
@@ -250,6 +269,8 @@ namespace mymoja
 
         private void load()
         {
+
+            w.WriteLine(DateTime.Now.ToString() + " " +"Načítání\n");
             string dir = @"./";
             string serializationFile = System.IO.Path.Combine(dir, "serverdata.bin");
             try
@@ -260,10 +281,13 @@ namespace mymoja
 
                     wservers = (List<WeatherServer>)bformatter.Deserialize(stream);
 
-                    if(wservers != null && wservers.Count > 1)
+                    w.WriteLine(DateTime.Now.ToString() + " " +"Načtených položek: "+ wservers.Count + "\n");
+
+                    if (wservers != null && wservers.Count > 1)
                     {
                         w1 = wservers[wservers.Count - 2];
                         w2 = wservers[wservers.Count - 1];
+                        w.WriteLine(DateTime.Now.ToString() + " " +"Servery přiřazeny, pokus o jejich vypsání\n");
                         show();
                     }
 
@@ -271,13 +295,15 @@ namespace mymoja
             }
             catch (Exception ex)
             {
-
+                w.WriteLine(DateTime.Now.ToString() + " " +"Chyba při načítání\n");
             }
             
         }
 
         private void save()
         {
+
+            w.WriteLine(DateTime.Now.ToString() + " " +"Uládání\n");
             string dir = @"./";
             string serializationFile = System.IO.Path.Combine(dir, "serverdata.bin");
             using (Stream stream = File.Open(serializationFile, FileMode.Create))
@@ -291,11 +317,15 @@ namespace mymoja
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             save();
+            w.WriteLine(DateTime.Now.ToString() + " " +"Zavírání programu\n");
+            w.Close();
         }
 
         private void bt_showStats(object sender, RoutedEventArgs e)
         {
             History hs = new History(wservers);
+
+            w.WriteLine(DateTime.Now.ToString() + " " +"Otevírání zobrazení statistik\n");
             hs.ShowDialog();
         }
 

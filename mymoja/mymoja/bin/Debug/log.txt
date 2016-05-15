@@ -1,0 +1,60 @@
+Načítání ze souboru..
+
+Načtených položek: 20
+
+Načítání ze souboru..
+
+Načítání
+
+Načtených položek: 20
+
+Servery přiřazeny, pokus o jejich vypsání
+
+Zobrazování
+
+Zobrazeno
+
+Levý server obdržel bod
+
+Zobrazování
+
+Zobrazeno
+
+Uládání
+
+Otevírání programu
+
+Načítání ze souboru..
+
+Načítání
+
+Načtených položek: 20
+
+Servery přiřazeny, pokus o jejich vypsání
+
+Zobrazování
+
+Zobrazeno
+
+Uládání
+
+Zavírání programu
+
+15.05.2016 23:45:27 Otevírání programu
+
+15.05.2016 23:45:27 Načítání ze souboru..
+
+15.05.2016 23:45:27 Načítání
+
+15.05.2016 23:45:27 Načtených položek: 20
+
+15.05.2016 23:45:27 Servery přiřazeny, pokus o jejich vypsání
+
+15.05.2016 23:45:27 Zobrazování
+
+15.05.2016 23:45:27 Zobrazeno
+
+15.05.2016 23:45:28 Uládání
+
+15.05.2016 23:45:28 Zavírání programu
+
