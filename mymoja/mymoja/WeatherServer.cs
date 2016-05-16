@@ -8,11 +8,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace mymoja
+namespace mymoja 
 {
     [Serializable]
-    class WeatherServer
-    {
+    class WeatherServer : IWeatherServer
+{
 
         private string html;
         private string url;

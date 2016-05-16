@@ -58,3 +58,77 @@ Zavírání programu
 
 15.05.2016 23:45:28 Zavírání programu
 
+16.05.2016 0:26:45 Otevírání programu
+
+16.05.2016 0:26:45 Načítání ze souboru..
+
+16.05.2016 0:26:45 Načítání
+
+16.05.2016 0:26:45 Načtených položek: 20
+
+16.05.2016 0:26:45 Servery přiřazeny, pokus o jejich vypsání
+
+16.05.2016 0:26:45 Zobrazování
+
+16.05.2016 0:26:45 Zobrazeno
+
+16.05.2016 0:26:46 Timer checkující download fired
+
+16.05.2016 0:26:46 Oba servery stáhly html
+
+16.05.2016 0:26:46 Zastavuji download timer
+
+16.05.2016 0:26:46 Parsování
+
+16.05.2016 0:26:46 Zobrazování
+
+16.05.2016 0:26:46 Zobrazeno
+
+16.05.2016 0:26:46 Levý server obdržel bod
+
+16.05.2016 0:26:46 Zobrazování
+
+16.05.2016 0:26:46 Zobrazeno
+
+16.05.2016 0:26:49 Otevírání zobrazení statistik
+
+16.05.2016 0:26:57 Uládání
+
+16.05.2016 0:26:57 Zavírání programu
+
+16.05.2016 0:27:00 Otevírání programu
+
+16.05.2016 0:27:00 Načítání ze souboru..
+
+16.05.2016 0:27:00 Načítání
+
+16.05.2016 0:27:00 Načtených položek: 22
+
+16.05.2016 0:27:00 Servery přiřazeny, pokus o jejich vypsání
+
+16.05.2016 0:27:00 Zobrazování
+
+16.05.2016 0:27:00 Zobrazeno
+
+16.05.2016 0:27:08 Uládání
+
+16.05.2016 0:27:08 Zavírání programu
+
+16.05.2016 0:27:15 Otevírání programu
+
+16.05.2016 0:27:15 Načítání ze souboru..
+
+16.05.2016 0:27:15 Načítání
+
+16.05.2016 0:27:15 Načtených položek: 22
+
+16.05.2016 0:27:15 Servery přiřazeny, pokus o jejich vypsání
+
+16.05.2016 0:27:15 Zobrazování
+
+16.05.2016 0:27:15 Zobrazeno
+
+16.05.2016 0:27:29 Uládání
+
+16.05.2016 0:27:29 Zavírání programu
+
